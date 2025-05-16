@@ -4,8 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HSC Visualizations</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <h1>Hemapoetic Stem Cell Visualizations</h1>
+
+    <a href="https://github.com/suchitbhayani/HSC-renewal/blob/main/correlation.ipynb">View data analysis code here</a>
+    <a href="https://github.com/suchitbhayani/HSC-visualizations/data">Download csv data here</a>
+    <p>Only includes genes with significant correlations with GEP 15 and 22 respectively among both HSCs and progenitors (alpha=0.05).</p>
+
+    <h2>Scatter plots</h2>
+    <p>We start off with the gene by GEP matrix and cell by GEP matrix. Then for each gene, we calculated the correlation between that gene and a GEP (correlations separated between HSCs and progenitors).</p>
+    <p>TLDR: We found correlation between each gene and a GEP (separated by HSCs and progenitors).</p>
+    <p>Below we have scatter plots where x axis is the correlation, and y axis is GEP expression.</p>
+
+    <p class="plot-title">GEP 15 Expression in genes vs. Gene correlation with GEP 15 (among HSCs only)</p>
+    <iframe src="plots/gep15_hsc_regression.html" width="100%" height="600" frameborder="0"></iframe>
+
+    <p class="plot-title">GEP 15 Expression in genes vs. Gene correlation with GEP 15 (among progenitors only)</p>
+    <iframe src="plots/gep15_prog_regression.html" width="100%" height="600" frameborder="0"></iframe>
     
+    <p class="plot-title">GEP 22 Expression in genes vs. Gene correlation with GEP 22 (among HSCs only)</p>
+    <iframe src="plots/gep22_hsc_regression.html" width="100%" height="600" frameborder="0"></iframe>
+
+    <p class="plot-title">GEP 22 Expression in genes vs. Gene correlation with GEP 22 (among progenitors only)</p>
+    <iframe src="plots/gep22_prog_regression.html" width="100%" height="600" frameborder="0"></iframe>
+    
+    <h2>Venn Diagrams</h2>
+    <p>Venn diagrams showing the sign (positive or negative) of gene correlations with GEPs among HSCs and progenitors</p>
+
+    <p class="plot-title">GEP 15 Correlation Venn Diagram</p>
+    <img src="images/15_venn.png" alt="GEP 15 Correlation Venn Diagram"/>
+
+    <p>for Hojun, list of 31 significant genes which are positively correlated with GEP 15 among HSCs, but negatively correlated with GEP 15 among progenitors.</p>
+    <ul>
+        <li>C1orf54</li>
+        <li>CCR9</li>
+        <li>CD79A</li>
+        <li>CD79B</li>
+        <li>CFP</li>
+        <li>CMTM2</li>
+        <li>CMTM8</li>
+        <li>CTSG</li>
+        <li>EGR4</li>
+        <li>FCMR</li>
+        <li>GIMAP1</li>
+        <li>HLA.DRB5</li>
+        <li>IRF7</li>
+        <li>JAML</li>
+        <li>LILRA1</li>
+        <li>LILRB2</li>
+        <li>LYZ</li>
+        <li>MECOM</li>
+        <li>MZB1</li>
+        <li>NOL6</li>
+        <li>P2RY13</li>
+        <li>PPFIBP1</li>
+        <li>PTPRE</li>
+        <li>RNU6.1208P</li>
+        <li>SETBP1</li>
+        <li>TIAM2</li>
+        <li>TMEM229B</li>
+        <li>TMEM92</li>
+        <li>TNFAIP2</li>
+        <li>TNFRSF1B</li>
+        <li>ZNF46</li>
+    </ul>
+
+    <p class="plot-title">GEP 22 Correlation Venn Diagram</p>
+    <img src="images/22_venn.png" alt="GEP 22 Correlation Venn Diagram"/>
+
 </body>
 </html>
